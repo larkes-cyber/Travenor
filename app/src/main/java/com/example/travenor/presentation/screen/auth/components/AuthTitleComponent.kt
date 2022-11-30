@@ -13,17 +13,16 @@ import com.example.travenor.presentation.theme.TitleColor
 import com.example.travenor.presentation.theme.sfuidisplay
 
 @Composable
-fun AuthTitleComponent(title:String) {
+fun AuthTitleComponent(title:String, size:Int) {
     Text(
         text = title,
         color = TitleColor,
         style = TextStyle(
-            fontSize = 26.sp
+            fontSize = size.sp
         ),
         fontFamily = sfuidisplay,
         fontWeight = FontWeight.SemiBold,
         fontStyle = FontStyle.Normal,
-        textAlign = TextAlign.Center,
-        modifier = Modifier.fillMaxWidth()
+        textAlign = TextAlign.Center
     )
 }

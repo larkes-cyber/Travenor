@@ -21,7 +21,8 @@ import com.example.travenor.presentation.theme.sfuidisplay
 
 @Composable
 fun AuthButtonComponent(
-    text:String
+    text:String,
+    state:  MutableState<Boolean>? = null
 ) {
     Button(
         shape = RoundedCornerShape(16.dp),
@@ -29,7 +30,7 @@ fun AuthButtonComponent(
             .height(56.dp)
             .fillMaxWidth(),
         colors = ButtonDefaults.buttonColors(backgroundColor = LightPrimaryBlue),
-        onClick = {}
+        onClick = {if(state != null) state.value = !state.value}
     ) {
         Text(
             text = text,
