@@ -18,6 +18,7 @@ import com.example.travenor.presentation.navigation.Screen
 import com.example.travenor.presentation.screen.auth.AuthScreen
 import com.example.travenor.presentation.screen.auth.ForgotPasswordScreen
 import com.example.travenor.presentation.screen.auth.RegScreen
+import com.example.travenor.presentation.screen.auth.VerificationScreen
 import com.example.travenor.presentation.screen.splash.SplashScreen
 import com.example.travenor.presentation.screen.trailer.TrailerScreen
 
@@ -41,6 +42,9 @@ fun Navigation() {
         }
         composable(route = Screen.ForgotPassword.route){
             ForgotPasswordScreen(navController = navController)
+        }
+        composable(route = Screen.VerificationScreen.route){
+            VerificationScreen(navController = navController)
         }
 
     }

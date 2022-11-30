@@ -25,7 +25,9 @@ fun AuthScreen(navController: NavController) {
                 .padding(start = 20.dp, end = 20.dp, bottom = 30.dp)
         ) {
             Spacer(Modifier.height(40.dp))
-            AuthTitleComponent(title = "Sign in now")
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                AuthTitleComponent(title = "Sign in now",26)
+            }
             Spacer(Modifier.height(12.dp))
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
                 AuthSubtitleComponent(subtitle = "Please sign in to continue our app",size = 16)
@@ -47,7 +49,7 @@ fun AuthScreen(navController: NavController) {
             Modifier
                 .align(Alignment.TopStart)
                 .padding(30.dp)) {
-            AuthFloatingButton()
+            AuthFloatingButton(route = Screen.SplashScreen.route, navController = navController)
         }
     }
 }

@@ -17,7 +17,9 @@ fun RegScreen(navController: NavController) {
                 .align(Alignment.BottomEnd)
                 .padding(start = 20.dp, end = 20.dp, bottom = 30.dp)
         ) {
-            AuthTitleComponent(title = "Sign up now")
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                AuthTitleComponent(title = "Sign up now",26)
+            }
             Spacer(Modifier.height(12.dp))
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center){
                 AuthSubtitleComponent(subtitle = "Please fill the details and create account",size = 16)
@@ -37,7 +39,7 @@ fun RegScreen(navController: NavController) {
             Modifier
                 .align(Alignment.TopStart)
                 .padding(30.dp)) {
-            AuthFloatingButton()
+            AuthFloatingButton(route = Screen.AuthScreen.route, navController = navController)
         }
     }
 }

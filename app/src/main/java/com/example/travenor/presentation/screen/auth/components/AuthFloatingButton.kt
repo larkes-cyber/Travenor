@@ -16,12 +16,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.travenor.presentation.theme.InputBoxColor
 import com.example.travenor.presentation.theme.TitleColor
 
 @Composable
-fun AuthFloatingButton() {
-    FloatingActionButton(onClick = {  },
+fun AuthFloatingButton(route:String, navController: NavController) {
+    FloatingActionButton(onClick = { navController.navigate(route) },
         backgroundColor = InputBoxColor,
         modifier = Modifier.height(44.dp).width(44.dp),
     ) {

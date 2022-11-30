@@ -5,7 +5,8 @@ sealed class Screen(val route:String){
     object TrailerScreen: Screen("trailer_screen")
     object AuthScreen: Screen("auth_screen")
     object RegScreen: Screen("reg_screen")
-    object ForgotPassword: Screen("forgot_password")
+    object ForgotPassword: Screen("forgot_password_screen")
+    object VerificationScreen: Screen("verf_screen")
 
     fun withArgs(vararg args: String):String{
         return buildString {
