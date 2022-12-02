@@ -1,5 +1,6 @@
 package com.example.travenor.presentation.navigation
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -33,6 +34,7 @@ fun BottomNavBar(
     ) {
         items.forEach { item ->
             val selected = item.route == backStackEntry.value?.destination?.route
+            Log.d("item_nav",onClick(item).toString())
             BottomNavigationItem(
                 selected = selected,
                 onClick = { onClick(item)},

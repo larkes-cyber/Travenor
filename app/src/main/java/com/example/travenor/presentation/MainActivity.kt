@@ -1,6 +1,7 @@
 package com.example.travenor.presentation
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -53,14 +54,14 @@ class MainActivity : ComponentActivity() {
                                     route = "profile"
                                 )
                             ),
-                            navController = navController,
-                            onClick = {
-                                navController.navigate(it.route)
-                            }
-                        )
+                            navController = navController
+                        ) {
+                            Log.d("nav_conr",it.toString())
+                           navController.navigate(it.route) //TODO: fix navcontroller nullpointer
+                        }
                     }
                 ) {
-                    Navigation()
+                    Navigation(navController)
                 }
 //                Surface(
 
