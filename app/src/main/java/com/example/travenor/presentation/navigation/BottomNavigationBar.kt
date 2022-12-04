@@ -34,7 +34,6 @@ fun BottomNavBar(
     ) {
         items.forEach { item ->
             val selected = item.route == backStackEntry.value?.destination?.route
-            Log.d("item_nav",onClick(item).toString())
             BottomNavigationItem(
                 selected = selected,
                 onClick = { onClick(item)},

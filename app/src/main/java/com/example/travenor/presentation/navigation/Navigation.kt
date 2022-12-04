@@ -20,6 +20,7 @@ import com.example.travenor.presentation.screen.auth.AuthScreen
 import com.example.travenor.presentation.screen.auth.ForgotPasswordScreen
 import com.example.travenor.presentation.screen.auth.RegScreen
 import com.example.travenor.presentation.screen.auth.VerificationScreen
+import com.example.travenor.presentation.screen.calendar.CalendarScreen
 import com.example.travenor.presentation.screen.home.HomeScreen
 import com.example.travenor.presentation.screen.splash.SplashScreen
 import com.example.travenor.presentation.screen.trailer.TrailerScreen
@@ -49,6 +50,9 @@ fun Navigation(navController: NavHostController) {
         }
         composable(route = Screen.HomeScreen.route){
             HomeScreen(navController = navController)
+        }
+        composable(route = Screen.CalendarScreen.route){
+            CalendarScreen()
         }
     }
 

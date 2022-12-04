@@ -56,8 +56,9 @@ class MainActivity : ComponentActivity() {
                             ),
                             navController = navController
                         ) {
-                            Log.d("nav_conr",it.toString())
-                           navController.navigate(it.route) //TODO: fix navcontroller nullpointer
+                          //  Log.d("nav_conr",navController.toString())
+                            navController.navigate(it.route)
+                         //  navController.navigate(it.route) //TODO: fix navcontroller nullpointer
                         }
                     }
                 ) {

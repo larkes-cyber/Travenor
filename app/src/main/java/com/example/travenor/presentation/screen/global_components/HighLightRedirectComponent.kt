@@ -1,4 +1,4 @@
-package com.example.travenor.presentation.screen.auth.components
+package com.example.travenor.presentation.screen.global_components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.ClickableText
