@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -19,13 +20,14 @@ import com.example.travenor.presentation.screen.auth.AuthScreen
 import com.example.travenor.presentation.screen.auth.ForgotPasswordScreen
 import com.example.travenor.presentation.screen.auth.RegScreen
 import com.example.travenor.presentation.screen.auth.VerificationScreen
+import com.example.travenor.presentation.screen.calendar.CalendarScreen
+import com.example.travenor.presentation.screen.home.HomeScreen
 import com.example.travenor.presentation.screen.splash.SplashScreen
 import com.example.travenor.presentation.screen.trailer.TrailerScreen
 
 @Composable
-fun Navigation() {
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.SplashScreen.route){
+fun Navigation(navController: NavHostController) {
+    NavHost(navController = navController, startDestination = Screen.HomeScreen.route){
         composable(route = Screen.SplashScreen.route){
             SplashScreen(navController = navController)
         }
@@ -46,7 +48,12 @@ fun Navigation() {
         composable(route = Screen.VerificationScreen.route){
             VerificationScreen(navController = navController)
         }
-
+        composable(route = Screen.HomeScreen.route){
+            HomeScreen(navController = navController)
+        }
+        composable(route = Screen.CalendarScreen.route){
+            CalendarScreen()
+        }
     }
 
 }

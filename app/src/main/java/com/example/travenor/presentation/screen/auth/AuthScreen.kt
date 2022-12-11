@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.travenor.presentation.navigation.Screen
 import com.example.travenor.presentation.screen.auth.components.*
+import com.example.travenor.presentation.screen.global_components.HighLightRedirectComponent
 
 @Composable
 fun AuthScreen(navController: NavController) {

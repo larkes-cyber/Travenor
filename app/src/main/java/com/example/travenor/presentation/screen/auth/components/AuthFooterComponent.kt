@@ -10,6 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.travenor.R
+import com.example.travenor.presentation.screen.global_components.HighLightRedirectComponent
 
 @Composable
 fun AuthFooterComponent(signUp:Boolean, route:String, navController: NavController) {
